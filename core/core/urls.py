@@ -14,8 +14,17 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, re_path, include
+from django.views.generic import TemplateView
+from django.conf.urls.static import static
+from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-]
+    
+] 
+# If a random route (.*) is entered, we will redirect to index.html
+urlpatterns += [re_path('^.*', TemplateView.as_view(template_name='index.html'))]
+# this is to include media files like images
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) 
+
