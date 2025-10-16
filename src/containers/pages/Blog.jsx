@@ -1,14 +1,13 @@
 import Layout from "hocs/layouts/Layout"
 import Navbar from "components/navigation/Navbar"
 import Footer from "components/navigation/Footer"
-import Header from "components/Header"
 
-function Home(){
+function Blog(){
     return(
         <Layout>
             <Navbar/>
-                <Header/>
+            Blog
             <Footer/>
         </Layout>
     )
-} export default Home
+} export default Blog

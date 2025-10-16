@@ -1,5 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
+import logo_sm from '../../assets/images/logo_small.png'
+
 
 const navigation = {
     solutions: [
@@ -94,18 +96,15 @@ const navigation = {
 
 function Footer() {
   return (
-    <footer className="bg-white" aria-labelledby="footer-heading">
+    <footer className="bg-gray-200" aria-labelledby="footer-heading">
         <h2 id="footer-heading" className="sr-only">
           Footer
         </h2>
         <div className="mx-auto max-w-full py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
           <div className="xl:grid xl:grid-cols-3 xl:gap-8">
             <div className="space-y-8 xl:col-span-1">
-              <img
-                className="h-10"
-                src="https://tailwindui.com/img/logos/mark.svg?color=gray&shade=300"
-                alt="Company name"
-              />
+              <img src={logo_sm} height={30} width={80} className=""/>
+              
               <p className="text-base text-gray-500">
                 Making the world a better place through constructing elegant hierarchies.
               </p>
@@ -121,7 +120,7 @@ function Footer() {
             <div className="mt-12 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
               <div className="md:grid md:grid-cols-2 md:gap-8">
                 <div>
-                  <h3 className="text-base font-medium text-gray-900">Solutions</h3>
+                  <h3 className="text-base font-medium text-gray-900">Visit Us</h3>
                   <ul role="list" className="mt-4 space-y-4">
                     {navigation.solutions.map((item) => (
                       <li key={item.name}>
@@ -133,7 +132,7 @@ function Footer() {
                   </ul>
                 </div>
                 <div className="mt-12 md:mt-0">
-                  <h3 className="text-base font-medium text-gray-900">Support</h3>
+                  <h3 className="text-base font-medium text-gray-900">Contact</h3>
                   <ul role="list" className="mt-4 space-y-4">
                     {navigation.support.map((item) => (
                       <li key={item.name}>
@@ -147,7 +146,7 @@ function Footer() {
               </div>
               <div className="md:grid md:grid-cols-2 md:gap-8">
                 <div>
-                  <h3 className="text-base font-medium text-gray-900">Company</h3>
+                  <h3 className="text-base font-medium text-gray-900">Services</h3>
                   <ul role="list" className="mt-4 space-y-4">
                     {navigation.company.map((item) => (
                       <li key={item.name}>
@@ -159,7 +158,7 @@ function Footer() {
                   </ul>
                 </div>
                 <div className="mt-12 md:mt-0">
-                  <h3 className="text-base font-medium text-gray-900">Legal</h3>
+                  <h3 className="text-base font-medium text-gray-900">Company</h3>
                   <ul role="list" className="mt-4 space-y-4">
                     {navigation.legal.map((item) => (
                       <li key={item.name}>
